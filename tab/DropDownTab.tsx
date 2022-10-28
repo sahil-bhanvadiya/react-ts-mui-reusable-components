@@ -1,7 +1,7 @@
 import * as React from 'react';
 import DropDown from '../components/DropDown/DropDown';
 export default function DropDownTab() {
-  const options: any = [
+  const options: { id: number; name: any; value: any }[] = [
     { id: 1, name: 'First', value: 'first' },
     { id: 2, name: 'Second', value: 'second' },
     { id: 3, name: 'Third', value: 'Third' },
@@ -10,7 +10,6 @@ export default function DropDownTab() {
   return (
     <div>
       <h3> DropDown-Options : First, Second, Third, Fourth </h3>
-      <br />
       <p>
         If we dosen't provide any selected option then take first option from
         data.
@@ -37,7 +36,6 @@ export default function DropDownTab() {
         options={options}
         label="Third Example"
         onChangeHandler={(data: any) => console.log(data)}
-        preSelectedOption={options[2]}
         width={350}
       />
     </div>

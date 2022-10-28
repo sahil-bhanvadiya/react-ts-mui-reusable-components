@@ -4,6 +4,8 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import DropDownTab from './DropDownTab';
+import SnackBarTab from './SnackBarTab';
+
 interface TabPanelProps {
   children?: React.ReactNode;
   index: number;
@@ -53,7 +55,7 @@ export default function BasicTabs() {
           aria-label="basic tabs example"
         >
           <Tab label="Dropdowns" {...a11yProps(0)} />
-          <Tab label="Item Two" {...a11yProps(1)} />
+          <Tab label="SnackBar" {...a11yProps(1)} />
           <Tab label="Item Three" {...a11yProps(2)} />
         </Tabs>
       </Box>
@@ -61,7 +63,7 @@ export default function BasicTabs() {
         <DropDownTab />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
+        <SnackBarTab />
       </TabPanel>
       <TabPanel value={value} index={2}>
         Item Three

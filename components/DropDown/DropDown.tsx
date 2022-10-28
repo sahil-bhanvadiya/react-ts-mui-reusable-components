@@ -6,18 +6,26 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 
+interface DropDownProps {
+  options: { id: number; name: any; value: any }[];
+  label?: string;
+  onChangeHandler: any;
+  preSelectedOption?: object;
+  width?: number;
+}
+
 const DropDown = ({
   options,
   label,
   onChangeHandler,
   preSelectedOption,
   width,
-}) => {
+}: DropDownProps) => {
   const [selectedOption, setSelectedOption] = useState({});
 
   useEffect(() => {
     // if there are no options
-    if (!options || options.length === 0) {
+    if (options.length === 0) {
       setSelectedOption('');
     }
     // if there are not any preSelected option then select first option by default.
