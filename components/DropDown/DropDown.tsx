@@ -43,7 +43,7 @@ const DropDown = ({
   };
 
   return (
-    <Box sx={{ minWidth: 120, width: width ? width : 100 }}>
+    <Box sx={{ minWidth: 200, width: width ? width : 100 }}>
       <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label">
           {label ? label : 'Label'}
